@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 32, 33, 34;
+    --background-rgb: 248, 249, 250;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+    @apply transition-colors duration-300;
+  }
+  
+  :root[class~="dark"]{
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+  }
+
+  * {
+    border-color: rgb(var(--foreground-rgb));
+  }
+
+}
+
+button {
+  @apply border-solid border-2 border-foreground py-1 px-3 mx-1;
+  @apply transition-all duration-300;
+  @apply hover:bg-foreground hover:text-background; 
+}
+
+.innerBody h1 {
+  @apply text-4xl font-bold border-b-2;
+}
+
+.innerBody h2 {
+  @apply text-3xl;
+}
+
+.innerBody h3 {
+  @apply text-xl;
+}
+
+.innerBody p, .innerBody li {
+  @apply text-lg;
+}
+
+.innerBody ul>li {
+  @apply list-disc list-inside pl-4;
+}
+
+.innerBody ol>li {
+  @apply list-decimal list-inside pl-4;
+}
+
+.innerBody li>p {
+  @apply pt-0;
+}
+
+.innerBody blockquote {
+  @apply text-neutral-700 pl-4 py-2 my-2 border-l-4 border-neutral-700 italic;
+  @apply dark:text-neutral-400 dark:border-neutral-400;
+}
+
+.innerBody a {
+  @apply underline dark:text-websitegreen text-websiteblue visited:text-websitepurple dark:visited:text-orange-500;
+}
+
+.innerBody p {
+  @apply my-2;
+}
+
+.innerBody img:hover {
+  content: attr(alt);
+}
+
+/*TODO: Refactor CSS*/
+.magicO {
+  @apply text-transparent bg-clip-text;
+  @apply transition-all duration-500 active:text-[110%];
+  background-image: url("/QueerPalleteRotated.svg");
+  background-position: 45% 30%;
+  background-size: 300%;
+  position: relative;
+}
+
+.magicO:hover {
+  background-position: 62% 73%;
+}
+
+
+.innerbody::first-letter {
+  font-size: 150%;
+}

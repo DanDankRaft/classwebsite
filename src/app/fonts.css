@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "OpenSauce";
+    src: url("/fonts/OpenSauceOne-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSauce";
+    src: url("/fonts/OpenSauceOne-Italic.ttf");
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "OpenSauce";
+    src: url("/fonts/OpenSauceOne-Bold.ttf");
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "OpenSauce";
+    src: url("/fonts/OpenSauceOne-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-Bold.otf");
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-BoldItalic.otf");
+    font-weight: bold;
+    font-style: italic;
+  }
