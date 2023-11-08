@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { Marked } from "marked";
+import { MyCarousel, sample } from "./exhibitcontents";
 
 function getPageJson(name) {
   //Get the path of the json file
@@ -32,7 +33,7 @@ export default async function Page({ params }) {
   return (
     <main>
       <div className="flex flex-col p-2 md:px-5 w-screen md:max-w-[1200px]">
-        <img src={pageJson.image} className="mx-auto w-full h-fit" />
+        <MyCarousel items={sample} />
         <div className="max-w-full">
           <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center my-2">
             {pageJson.name}
