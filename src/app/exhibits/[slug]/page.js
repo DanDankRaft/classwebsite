@@ -9,7 +9,7 @@ function getPageJson(name) {
     .readFile(filePath)
     .then(res => JSON.parse(res))
     .catch(res => {
-      throw new Error("no such exhibit");
+      throw new Error("no such exhibit: " + filePath.toString());
     });
 }
 
@@ -21,9 +21,9 @@ function getPageMarkdown(name) {
     .readFile(filePath)
     .then(res => res.toString())
     .then(res => marked.parse(res, {silent: true, gfm: true}))
-    .catch(res => {
-      throw new Error("no such exhibit");
-    });
+    .catch(res => 
+      "no such exhibit"
+    );
 }
 
 export default async function Page({ params }) {
@@ -31,14 +31,20 @@ export default async function Page({ params }) {
   const pageMarkdown = await getPageMarkdown(params.slug);
   return (
     <main>
-      <div className="flex flex-col p-2 md:px-5 max-w-[1200px]">
+      <div className="flex flex-col p-2 md:px-5 w-screen md:max-w-[1200px]">
         <img src={pageJson.image} className="mx-auto w-full h-fit" />
-        <div className="min-w-full">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl text-center my-2">
+        <div className="max-w-full">
+          <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center my-2">
             {pageJson.name}
-          </h1>
+          </p>
+          <p className="text-center text-xl">
+            {pageJson.contents}
+          </p>
           <hr className="my-1 border-y-2 rounded-full" />
-          <div className="innerBody" dangerouslySetInnerHTML={{__html: pageMarkdown}} />
+          {pageMarkdown == "no such exhibit" ?
+            <div className="innerBody">{pageJson.contents}</div> : 
+            <div className="innerBody" dangerouslySetInnerHTML={{__html: pageMarkdown}}/>
+          }
         </div>
       </div>
     </main>
