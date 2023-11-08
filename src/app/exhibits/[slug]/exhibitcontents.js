@@ -4,6 +4,7 @@ import "./contents.css";
 import { Carousel } from "react-responsive-carousel";
 
 export const sample = [
+    {type: "iframe", src: "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1vTuD0CGhjFvakoFK59aBE3ZPb168coQ&ehbc=2E312F&noprof=1\" width=\"640\" height=\"480\"></iframe>"},
     {type: "image", src: "/prideflag.jpg"},
     {type: "image", src: "/progressflag.png"},
     {type: "youtube", src: "https://www.youtube.com/embed/spGBcbFB79k?si=n4q15WqrK_eWVB5M"},
@@ -26,6 +27,9 @@ export function MyCarousel(props) {
                         break;
                     case "ms-stream":
                         contents = (<iframe src={e.src} width="1280" height="720" allowFullScreen></iframe>);
+                        break;
+                    case "iframe":
+                        contents = ( <div dangerouslySetInnerHTML={{ __html: e.src }} />);
                         break;
                     default:
                         contents = (<p>Error! invalid content type! supported types are "image", "youtube"</p>);
