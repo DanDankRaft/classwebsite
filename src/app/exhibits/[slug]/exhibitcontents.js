@@ -32,7 +32,7 @@ export function MyCarousel(props) {
                         contents = ( <div dangerouslySetInnerHTML={{ __html: e.src }} />);
                         break;
                     default:
-                        contents = (<p>Error! invalid content type! supported types are "image", "youtube"</p>);
+                        contents = (<p>{'Error! invalid content type! supported types are "image", "youtube"'}</p>);
                         break;
                 }
 
