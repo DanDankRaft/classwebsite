@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
         className="flex min-h-screen flex-col items-center p-2 md:px-24 md:py-5"
       >
         <Link href="/">
-          <h1 className="text-[3.25rem] sm:text-[3.5rem] leading-none text-center md:text-7xl font-bold">
+          <h1 className="text-[3.25rem] sm:text-[3.5rem] leading-none text-center md:text-7xl font-bold select-none">
             <span className="magicO">Ecstatic</span> Time
           </h1>
         </Link>
-          <p className="text-center text-2xl">HERE in the QUEER SOUTH</p>
+          <p className="text-center text-2xl select-none">HERE in the QUEER SOUTH</p>
           <AccessibilityMenu />
         {children}
       </body>

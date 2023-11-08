@@ -31,8 +31,12 @@ button {
   @apply hover:bg-foreground hover:text-background; 
 }
 
+.innerBody img {
+  @apply max-w-full;
+}
+
 .innerBody h1 {
-  @apply text-4xl font-bold border-b-2;
+  @apply text-4xl font-bold border-b-2 target:text-websiteorange;
 }
 
 .innerBody h2 {
@@ -59,13 +63,20 @@ button {
   @apply pt-0;
 }
 
+*::selection {
+  @apply bg-websitecyan dark:bg-websiteorange;
+}
+
+
+
 .innerBody blockquote {
-  @apply text-neutral-700 pl-4 py-2 my-2 border-l-4 border-neutral-700 italic;
+  @apply text-neutral-700 pl-4 py-1 my-2 border-l-4 border-neutral-700 italic;
   @apply dark:text-neutral-400 dark:border-neutral-400;
 }
 
 .innerBody a {
-  @apply underline dark:text-websitegreen text-websiteblue visited:text-websitepurple dark:visited:text-orange-500;
+  @apply hover:underline dark:text-websitegreen text-websiteblue visited:text-websitepurple dark:visited:text-orange-500;
+  @apply selection:visited:text-websitegreen;
 }
 
 .innerBody p {
