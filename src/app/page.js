@@ -3,11 +3,14 @@ import fs from "fs/promises";
 import path from "path";
 
 function GetAllExhibits() {
-  const exhibitsPath = path.join(process.cwd(), "json");
+  const exhibitsPath = path.join(process.cwd(), "exhibits");
   return fs
-    .readdir(exhibitsPath)
-    .then((res) => res.map((x) => fs.readFile(path.join(exhibitsPath, x))))
-    .then((val) => Promise.all(val)) //converts the previous step's array of promises (unworkable) into one promise returning an array
+    .readdir(exhibitsPath, {withFileTypes: true})
+    //filter to subdirectories only
+    .then(res => res.filter(file => file.isDirectory()))
+    //get info.json from each subdirectory
+    .then(res => res.map(x => fs.readFile(path.join(x.path, x.name, "info.json"))))
+    .then(arr => Promise.all(arr))
     .then((jsons) => jsons.map((x) => JSON.parse(x)));
 }
 
@@ -16,9 +19,9 @@ const colors = ["#F32C2C", "#F7823A", "#F7D93A", "#62DA67", "#62D3DA", "#333D95"
 function ExhibitLarge(props) {
   //TODO: refactor CSS
   return (
-      <Link href={`/exhibits/${props.filename}`} className="group flex flex-col justify-center gap-2 max-h-none md:flex-row md:max-h-[230px] my-5">
+      <Link href={`/exhibits/${props.address}`} className="group flex flex-col justify-center gap-2 max-h-none md:flex-row md:max-h-[230px] my-5">
         <img
-          src={props.image}
+          src={`/assets/${props.address}/${props.thumbnail}`}
           className="max-w-[450px] w-full max-h-fit mx-auto md:mx-0 group-hover:scale-[1.02] md:group-hover:scale-105 md:group-focus:scale-105 md:group-active:scale-110 transition-transform"
           alt="test accessibility text"
         />
@@ -36,17 +39,18 @@ function ExhibitLarge(props) {
 export default async function Home() {
   return (
     <main className="w-full">
-      
-      {(await GetAllExhibits()).map((x, i) => (
+      {((await GetAllExhibits()).map((x, i) => (
         <ExhibitLarge
           key={i}
           i={i}
           name={x.name}
-          image={x.image}
-          contents={x.contents}
-          filename={x.filename}
+          thumbnail={x.thumbnail}
+          contents={x.subheading}
+          address={x.address}
         />
-      ))}
+      )))
+        
+      }
     </main>
   );
 }
