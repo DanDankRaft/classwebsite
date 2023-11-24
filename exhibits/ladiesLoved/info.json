@@ -1,0 +1,15 @@
+{
+    "name": "Ladies Loved and Lost: The History of Austin's Lesbian Bars",
+    "thumbnail": "thumbnail.jpg",
+    "subheading": "This exhibition documents and visually maps out the history of enumerated lesbian nightlife presence in downtown Austin, Texas from the early 1960's to 2008. Because there are no longer any public club spaces that are specifically made for lesbians, women, and gender nonconforming people in Austin, this represents an increasingly pressing issue surrounding urban renewal and underrepresentation in a city that boasts tolerance and inclusivity. Lesbians and the need for female and gender-nonconforming spaces have always existed in Austin, and this list of over twenty lesbian-centered spaces highlights this need, despite concerted city official efforts to bastardize these spaces into straight or strictly gay-male bars. With this presentation, I hope to display the fact that these spaces have existed for decades, should exist in our present lives, and should be understood better in our collective memories in order to prevent these spaces from being forgotten, lost, and destroyed.",
+    "address": "ladiesLoved",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.jpg"},
+        {"type": "image", "src": "img1.png"},
+        {"type": "image", "src": "img2.png"},
+        {"type": "image", "src": "img3.jpg"},
+        {"type": "image", "src": "img4.jpg"},
+        {"type": "image", "src": "img5.jpg"},
+        {"type": "iframe", "src": "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1vTuD0CGhjFvakoFK59aBE3ZPb168coQ&ehbc=2E312F&noprof=1\" width=\"640\" height=\"480\"></iframe>"}
+    ]
+}

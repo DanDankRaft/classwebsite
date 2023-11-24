@@ -5,7 +5,7 @@ import { MyCarousel, sample } from "./exhibitcontents";
 
 function getPageJson(name) {
   //Get the path of the json file
-  const filePath = path.join(process.cwd(), `json/${name}.json`);
+  const filePath = path.join(process.cwd(), `exhibits/${name}/info.json`);
   return fs
     .readFile(filePath)
     .then(res => JSON.parse(res))
@@ -17,7 +17,7 @@ function getPageJson(name) {
 const marked = new Marked();
 
 function getPageMarkdown(name) {
-  const filePath = path.join(process.cwd(), `md/${name}.md`);
+  const filePath = path.join(process.cwd(), `exhibits/${name}/content.md`);
   return fs
     .readFile(filePath)
     .then(res => res.toString())
@@ -33,7 +33,7 @@ export default async function Page({ params }) {
   return (
     <main>
       <div className="flex flex-col p-2 md:px-5 w-screen md:max-w-[1200px]">
-        <MyCarousel items={sample} />
+        <MyCarousel items={pageJson.carousel} exhibitname={pageJson.address} />
         <div className="max-w-full">
           <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center my-2">
             {pageJson.name}
@@ -43,7 +43,7 @@ export default async function Page({ params }) {
           </p>
           <hr className="my-1 border-y-2 rounded-full" />
           {pageMarkdown == "no such exhibit" ?
-            <div className="innerBody">{pageJson.contents}</div> : 
+            <div className="innerBody">{pageJson.subheading}</div> : 
             <div className="innerBody" dangerouslySetInnerHTML={{__html: pageMarkdown}}/>
           }
         </div>

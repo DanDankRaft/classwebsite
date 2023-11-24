@@ -104,3 +104,7 @@ button {
 .innerbody::first-letter {
   font-size: 150%;
 }
+
+input {
+  @apply bg-background border-solid border-2 border-foreground px-1;
+}

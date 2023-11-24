@@ -1,0 +1,9 @@
+{
+    "name": "Dallas 1992 Lesbian and Gay Film Festival",
+    "thumbnail": "thumbnail.png",
+    "subheading": "Our project focuses on the Dallas 1992 Lesbian and Gay Film Festival and aims to analyze its impact. We will start by examining the state of film in the late 80s and early 90s then move on to the inaugural festival in 1990. Lastly, we provide an overview of the 1992 festival and explore its effects on the community. The festival was the second of its kind in Dallas and aimed to promote unity through realistic portrayals of queer individuals through independent film. A festival setting like this is often the only way that these independent films are shown to the public, all the films selected had never premiered in Dallas before. At the time, mainstream media often presented stereotypical and shallow depictions of queer individuals, the only way to fill theaters and turn a profit was to cater to the non-queer masses.",
+    "address": "filmFestival",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.png"}
+    ]
+}
