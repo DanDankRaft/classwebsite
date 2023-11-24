@@ -43,7 +43,7 @@ export default async function Page({ params }) {
           </p>
           <hr className="my-1 border-y-2 rounded-full" />
           {pageMarkdown == "no such exhibit" ?
-            <div className="innerBody">{pageJson.contents}</div> : 
+            <div className="innerBody">{pageJson.subheading}</div> : 
             <div className="innerBody" dangerouslySetInnerHTML={{__html: pageMarkdown}}/>
           }
         </div>

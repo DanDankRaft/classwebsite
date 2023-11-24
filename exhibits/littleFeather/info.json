@@ -1,0 +1,9 @@
+{
+    "name": "Little Feather Productions Presents",
+    "thumbnail": "thumbnail.png",
+    "subheading": "From 1979 to 1992, Little Feather Productions, an entirely volunteer-run concert promotion group, brought women's music performers to DFW. Performers at Little Feather concerts were drawn from a highly developed, very queer national women's music network that included independent record labels, music festivals, and other concert producers. By arranging these concerts, the volunteers of Little Feather Productions provided Dallas with unique spaces for lesbian community building.",
+    "address": "littleFeather",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.png"}
+    ]
+}
