@@ -1,0 +1,9 @@
+{
+    "name": "The life of Aaron henry",
+    "thumbnail": "thumbnail.jpg",
+    "subheading": "Aaron Henry was a prominent civil rights activist. He is well known for being the head of the Mississippi branch NAACP. This exhibit shows how his his struggle with civil rights also intertwined with his queer sexuality.",
+    "address": "ahenry",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.jpg"}
+    ]
+}
