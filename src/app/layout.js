@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className="flex min-h-screen flex-col items-center p-2 md:px-24 md:py-5"
       >
