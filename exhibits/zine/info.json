@@ -1,0 +1,9 @@
+{
+    "name": "Where do We Exist for All of Time? A Zine about Queer Suothern Zines!",
+    "thumbnail": "thumbnail.png",
+    "subheading": "Zines are very important to queer history and counterculture in general. In this project, we examine how queer identity has been expressed through zine culture and take a look at how southern queer folk were able to express themselves through this medium. A zine is a small, self published magazine that has been around for many years, with it being popularized for punk and other countercultures in the 1970s and on. This project examines zines from 80s-early 2000s on queer culture in the south, along with the many facets of one’s queer identity in the south.",
+    "address": "zine",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.png"}
+    ]
+}
