@@ -5,11 +5,11 @@
     "address": "ladiesLoved",
     "carousel": [
         {"type": "image", "src": "thumbnail.jpg"},
+        {"type": "iframe", "src": "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1vTuD0CGhjFvakoFK59aBE3ZPb168coQ&ehbc=2E312F&noprof=1\" width=\"640\" height=\"480\"></iframe>"},
         {"type": "image", "src": "img1.png"},
         {"type": "image", "src": "img2.png"},
         {"type": "image", "src": "img3.jpg"},
         {"type": "image", "src": "img4.jpg"},
-        {"type": "image", "src": "img5.jpg"},
-        {"type": "iframe", "src": "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1vTuD0CGhjFvakoFK59aBE3ZPb168coQ&ehbc=2E312F&noprof=1\" width=\"640\" height=\"480\"></iframe>"}
+        {"type": "image", "src": "img5.jpg"}
     ]
 }
