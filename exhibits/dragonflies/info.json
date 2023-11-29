@@ -4,6 +4,8 @@
     "subheading": "Founded in January 1994 by Dr. Chwee-Lye Chng, the Dragonflies of Dallas is a gay Asian American and Pacific Islander (AAPI) support group. This exhibit displays snapshots into the Dragonflies’ lived experiences with one another as a family. In the communal spirit of the Dragonflies, we have created a new issue of The Buzz of Dragonflies, the Dragonflies’ official monthly newsletter, for November 2023 as well as provided Asian snacks for visitors and friends to enjoy.",
     "address": "dragonflies",
     "carousel": [
-        {"type": "image", "src": "thumbnail.png"}
+        {"type": "image", "src": "thumbnail.png"},
+        {"type": "youtube", "src": "https://www.youtube.com/embed/_q1qKtGTGgo?si=y_sUyBX3KvCDQrsz"},
+        {"type": "youtube", "src": "https://www.youtube.com/embed/M94NV3UHrNg?si=asHpDQ8U3FY4dl5p"}
     ]
 }
