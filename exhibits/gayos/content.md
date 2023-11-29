@@ -1,0 +1,1 @@
+To check out the exhibit, go to: [https://gayos.vercel.app]() (NOTE, DOES NOT WORK ON MOBILE)

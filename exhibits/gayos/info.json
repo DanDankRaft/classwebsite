@@ -1,0 +1,9 @@
+{
+    "name": "GayOS: A history of queer workers in tech",
+    "thumbnail": "thumbnail.png",
+    "subheading": "Queer people are everywhere - tech included. Go to any computer science/engineering organization in UTD, or any tech office in Texas, and you are bound to find queer people. Yet we often tend to think of queer history and tech history as two completely separate things. It turns out, there is a dep connection between queer history and tech history. This interactive exhibit portrays the people developing many of the technologies we use every day explored, expressed, and advanced queerness.",
+    "address": "gayos",
+    "carousel": [
+        {"type": "image", "src": "thumbnail.png"}
+    ]
+}
